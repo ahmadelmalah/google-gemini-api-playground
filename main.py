@@ -14,3 +14,8 @@ genai.configure(api_key=os.environ.get("api_key"))
 model = genai.GenerativeModel("gemini-1.0-pro-latest")
 response = model.generate_content("The opposite of hot is")
 print(response.text)
+
+# Create a new model
+model = genai.GenerativeModel("gemini-pro")
+response = model.generate_content("What is the meaning of life?")
+print(response.text)
